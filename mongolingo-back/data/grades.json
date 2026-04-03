@@ -1,0 +1,122 @@
+[
+  {
+    "studentId": "E1",
+    "coursId": "C2",
+    "note_finale": 11,
+    "presence": 81
+  },
+  {
+    "studentId": "E1",
+    "coursId": "C3",
+    "note_finale": 10,
+    "presence": 89
+  },
+  {
+    "studentId": "E2",
+    "coursId": "C2",
+    "note_finale": 14,
+    "presence": 96
+  },
+  {
+    "studentId": "E2",
+    "coursId": "C4",
+    "note_finale": 17,
+    "presence": 91
+  },
+  {
+    "studentId": "E3",
+    "coursId": "C3",
+    "note_finale": 10,
+    "presence": 92
+  },
+  {
+    "studentId": "E3",
+    "coursId": "C5",
+    "note_finale": 20,
+    "presence": 89
+  },
+  {
+    "studentId": "E4",
+    "coursId": "C2",
+    "note_finale": 18,
+    "presence": 99
+  },
+  {
+    "studentId": "E4",
+    "coursId": "C4",
+    "note_finale": 15,
+    "presence": 82
+  },
+  {
+    "studentId": "E5",
+    "coursId": "C5",
+    "note_finale": 15,
+    "presence": 91
+  },
+  {
+    "studentId": "E5",
+    "coursId": "C2",
+    "note_finale": 16,
+    "presence": 80
+  },
+  {
+    "studentId": "E6",
+    "coursId": "C5",
+    "note_finale": 20,
+    "presence": 81
+  },
+  {
+    "studentId": "E6",
+    "coursId": "C1",
+    "note_finale": 20,
+    "presence": 84
+  },
+  {
+    "studentId": "E7",
+    "coursId": "C2",
+    "note_finale": 11,
+    "presence": 83
+  },
+  {
+    "studentId": "E7",
+    "coursId": "C5",
+    "note_finale": 18,
+    "presence": 87
+  },
+  {
+    "studentId": "E8",
+    "coursId": "C2",
+    "note_finale": 19,
+    "presence": 85
+  },
+  {
+    "studentId": "E8",
+    "coursId": "C3",
+    "note_finale": 13,
+    "presence": 96
+  },
+  {
+    "studentId": "E9",
+    "coursId": "C4",
+    "note_finale": 18,
+    "presence": 80
+  },
+  {
+    "studentId": "E9",
+    "coursId": "C5",
+    "note_finale": 16,
+    "presence": 100
+  },
+  {
+    "studentId": "E10",
+    "coursId": "C4",
+    "note_finale": 19,
+    "presence": 80
+  },
+  {
+    "studentId": "E10",
+    "coursId": "C5",
+    "note_finale": 19,
+    "presence": 94
+  }
+]

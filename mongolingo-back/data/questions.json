@@ -1,0 +1,317 @@
+[
+  {
+    "levelId": 1,
+    "questionId": 1,
+    "description": "Récupérer tous les documents de la collection etudiants",
+    "explanation": "find({}) sans filtre retourne tous les documents de la collection.",
+    "solution": "db.etudiants.find({})"
+  },
+  {
+    "levelId": 1,
+    "questionId": 2,
+    "description": "Récupérer tous les documents de la collection cours",
+    "explanation": "Sans filtre, find({}) retourne l'intégralité de la collection.",
+    "solution": "db.cours.find({})"
+  },
+  {
+    "levelId": 1,
+    "questionId": 3,
+    "description": "Compter le nombre de documents dans la collection etudiants",
+    "explanation": "countDocuments({}) compte tous les documents d'une collection.",
+    "solution": "db.etudiants.countDocuments({})"
+  },
+  {
+    "levelId": 1,
+    "questionId": 4,
+    "description": "Filtrer les etudiants dont le programme est 'Informatique'",
+    "explanation": "On ajoute un filtre sur le champ programme.",
+    "solution": "db.etudiants.find({ programme: \"Informatique\" })"
+  },
+  {
+    "levelId": 1,
+    "questionId": 5,
+    "description": "Dans etudiants, afficher uniquement les champs name et email (pas le _id)",
+    "explanation": "La projection { champ: 1 } inclut, _id: 0 exclut ce champ.",
+    "solution": "db.etudiants.find({}, { name: 1, email: 1, _id: 0 })"
+  },
+  {
+    "levelId": 1,
+    "questionId": 6,
+    "description": "Dans la collection cours, trouver celui avec le titre 'Introduction à MongoDB'",
+    "explanation": "Filtre sur le champ titre de la collection cours.",
+    "solution": "db.cours.find({ titre: \"Introduction à MongoDB\" })"
+  },
+  {
+    "levelId": 1,
+    "questionId": 7,
+    "description": "Dans etudiants, trouver ceux dont le statut n'est pas 'actif'",
+    "explanation": "$ne signifie 'not equal' - différent de.",
+    "solution": "db.etudiants.find({ statut: { $ne: \"actif\" } })"
+  },
+  {
+    "levelId": 1,
+    "questionId": 8,
+    "description": "Dans inscriptions, trouver celles liées au cours C1",
+    "explanation": "On filtre sur le champ coursId de la collection inscriptions.",
+    "solution": "db.inscriptions.find({ coursId: \"C1\" })"
+  },
+  {
+    "levelId": 1,
+    "questionId": 9,
+    "description": "Compter le nombre de documents dans la collection cours",
+    "explanation": "countDocuments({}) sans filtre donne le nombre total.",
+    "solution": "db.cours.countDocuments({})"
+  },
+  {
+    "levelId": 1,
+    "questionId": 10,
+    "description": "Dans cours, afficher le titre et le professeur uniquement",
+    "explanation": "Projection pour choisir les champs à afficher.",
+    "solution": "db.cours.find({}, { titre: 1, professeur: 1, _id: 0 })"
+  },
+  {
+    "levelId": 1,
+    "questionId": 11,
+    "description": "Lister les valeurs uniques du champ 'programme' dans etudiants",
+    "explanation": "distinct() retourne toutes les valeurs uniques d'un champ.",
+    "solution": "db.etudiants.distinct(\"programme\")"
+  },
+  {
+    "levelId": 1,
+    "questionId": 12,
+    "description": "Filtrer les etudiants de genre féminin (F)",
+    "explanation": "Filtre simple sur le champ genre de etudiants.",
+    "solution": "db.etudiants.find({ genre: \"F\" })"
+  },
+  {
+    "levelId": 1,
+    "questionId": 13,
+    "description": "Dans inscriptions, trouver celles avec le statut 'complété'",
+    "explanation": "Filtre sur le champ statut de la collection inscriptions.",
+    "solution": "db.inscriptions.find({ statut: \"complété\" })"
+  },
+  {
+    "levelId": 1,
+    "questionId": 14,
+    "description": "Dans la collection cours, trouver les cours du professeur 'Martin'",
+    "explanation": "Filtre sur le champ professeur de la collection cours.",
+    "solution": "db.cours.find({ professeur: \"Martin\" })"
+  },
+  {
+    "levelId": 1,
+    "questionId": 15,
+    "description": "Dans inscriptions, afficher uniquement la date et le statut",
+    "explanation": "Projection sur les champs date_inscription et statut.",
+    "solution": "db.inscriptions.find({}, { date_inscription: 1, statut: 1, _id: 0 })"
+  },
+  {
+    "levelId": 2,
+    "questionId": 16,
+    "description": "Dans etudiants, trier par date d'inscription (plus récent) et limiter à 3",
+    "explanation": "sort() ordonne, limit() restreint le nombre de résultats.",
+    "solution": "db.etudiants.find({}).sort({ date_inscription: -1 }).limit(3)"
+  },
+  {
+    "levelId": 2,
+    "questionId": 17,
+    "description": "Dans etudiants, compter combien d'étudiants par programme",
+    "explanation": "$group permet d'agréger et compter par groupe.",
+    "solution": "db.etudiants.aggregate([{ $group: { _id: \"$programme\", total: { $sum: 1 } } }])"
+  },
+  {
+    "levelId": 2,
+    "questionId": 18,
+    "description": "Filtrer les etudiants dont le niveau est égal à 2",
+    "explanation": "Filtre sur le champ numérique niveau.",
+    "solution": "db.etudiants.find({ niveau: 2 })"
+  },
+  {
+    "levelId": 2,
+    "questionId": 19,
+    "description": "Dans cours, trouver ceux avec une capacité inférieure à 30",
+    "explanation": "$lt signifie 'less than' - plus petit que.",
+    "solution": "db.cours.find({ capacite: { $lt: 30 } })"
+  },
+  {
+    "levelId": 2,
+    "questionId": 20,
+    "description": "Dans etudiants, trouver ceux qui ont un numéro de téléphone",
+    "explanation": "$exists: true vérifie si le champ est présent.",
+    "solution": "db.etudiants.find({ telephone: { $exists: true } })"
+  },
+  {
+    "levelId": 2,
+    "questionId": 21,
+    "description": "Lister les valeurs uniques du champ 'niveau' dans etudiants",
+    "explanation": "distinct() sur un champ numérique.",
+    "solution": "db.etudiants.distinct(\"niveau\")"
+  },
+  {
+    "levelId": 2,
+    "questionId": 22,
+    "description": "Calculer la somme de toutes les capacités dans la collection cours",
+    "explanation": "$sum additionne les valeurs d'un champ avec $group.",
+    "solution": "db.cours.aggregate([{ $group: { _id: null, capaciteTotale: { $sum: \"$capacite\" } } }])"
+  },
+  {
+    "levelId": 2,
+    "questionId": 23,
+    "description": "Dans cours, trouver ceux avec heures entre 20 et 50",
+    "explanation": "$gte et $lte définissent un intervalle.",
+    "solution": "db.cours.find({ heures: { $gte: 20, $lte: 50 } })"
+  },
+  {
+    "levelId": 2,
+    "questionId": 24,
+    "description": "Dans etudiants, filtrer ceux qui sont actifs ET du programme Droit",
+    "explanation": "Plusieurs conditions dans find() font un ET logique.",
+    "solution": "db.etudiants.find({ statut: \"actif\", programme: \"Droit\" })"
+  },
+  {
+    "levelId": 2,
+    "questionId": 25,
+    "description": "Dans inscriptions, compter combien par statut",
+    "explanation": "$group par statut puis $sum pour compter.",
+    "solution": "db.inscriptions.aggregate([{ $group: { _id: \"$statut\", total: { $sum: 1 } } }])"
+  },
+  {
+    "levelId": 2,
+    "questionId": 26,
+    "description": "Dans grades, trouver les notes supérieures ou égales à 12",
+    "explanation": "$gte pour greater than or equal - supérieur ou égal.",
+    "solution": "db.grades.find({ note_finale: { $gte: 12 } })"
+  },
+  {
+    "levelId": 2,
+    "questionId": 27,
+    "description": "Calculer la moyenne du champ note_finale dans grades",
+    "explanation": "$avg calcule la moyenne d'un champ numérique.",
+    "solution": "db.grades.aggregate([{ $group: { _id: null, moyenne: { $avg: \"$note_finale\" } } }])"
+  },
+  {
+    "levelId": 2,
+    "questionId": 28,
+    "description": "Dans inscriptions, trouver celles où coursId est C1 ou C3",
+    "explanation": "$in vérifie si la valeur est dans une liste.",
+    "solution": "db.inscriptions.find({ coursId: { $in: [\"C1\", \"C3\"] } })"
+  },
+  {
+    "levelId": 2,
+    "questionId": 29,
+    "description": "Dans cours, calculer la moyenne des heures par programme",
+    "explanation": "$group par programme puis $avg pour la moyenne.",
+    "solution": "db.cours.aggregate([{ $group: { _id: \"$programme\", heuresMoyennes: { $avg: \"$heures\" } } }])"
+  },
+  {
+    "levelId": 2,
+    "questionId": 30,
+    "description": "Dans etudiants, filtrer les hommes et trier par niveau décroissant",
+    "explanation": "Filtre sur genre puis tri sur niveau.",
+    "solution": "db.etudiants.find({ genre: \"M\" }).sort({ niveau: -1 })"
+  },
+  {
+    "levelId": 3,
+    "questionId": 31,
+    "description": "Dans etudiants, augmenter de 1 le niveau de tous ceux actifs",
+    "explanation": "$inc incrémente un champ numérique.",
+    "solution": "db.etudiants.updateMany({ statut: \"actif\" }, { $inc: { niveau: 1 } })"
+  },
+  {
+    "levelId": 3,
+    "questionId": 32,
+    "description": "Dans inscriptions, changer le statut en 'complété' pour l'étudiant E1",
+    "explanation": "updateOne modifie un seul document avec $set.",
+    "solution": "db.inscriptions.updateOne({ studentId: \"E1\" }, { $set: { statut: \"complété\" } })"
+  },
+  {
+    "levelId": 3,
+    "questionId": 33,
+    "description": "Supprimer de inscriptions toutes celles avec le statut 'annulé'",
+    "explanation": "deleteMany supprime tous les documents correspondant au filtre.",
+    "solution": "db.inscriptions.deleteMany({ statut: \"annulé\" })"
+  },
+  {
+    "levelId": 3,
+    "questionId": 34,
+    "description": "Dans grades, calculer la moyenne des notes par étudiant",
+    "explanation": "$group par studentId avec $avg sur note_finale.",
+    "solution": "db.grades.aggregate([{ $group: { _id: \"$studentId\", moyenne: { $avg: \"$note_finale\" } } }])"
+  },
+  {
+    "levelId": 3,
+    "questionId": 35,
+    "description": "Dans inscriptions, lister les 5 cours avec le plus d'inscriptions",
+    "explanation": "Groupe par coursId, compte, trie décroissant, limite à 5.",
+    "solution": "db.inscriptions.aggregate([{ $group: { _id: \"$coursId\", total: { $sum: 1 } } }, { $sort: { total: -1 } }, { $limit: 5 }])"
+  },
+  {
+    "levelId": 3,
+    "questionId": 36,
+    "description": "Dans grades, trouver les étudiants avec une présence inférieure à 70%",
+    "explanation": "Filtre sur le champ presence avec $lt.",
+    "solution": "db.grades.find({ presence: { $lt: 70 } })"
+  },
+  {
+    "levelId": 3,
+    "questionId": 37,
+    "description": "Dans inscriptions, joindre avec etudiants pour récupérer les noms",
+    "explanation": "$lookup permet de fusionner des données de deux collections.",
+    "solution": "db.inscriptions.aggregate([{ $lookup: { from: \"etudiants\", localField: \"studentId\", foreignField: \"id\", as: \"etudiant\" } }, { $unwind: \"$etudiant\" }])"
+  },
+  {
+    "levelId": 3,
+    "questionId": 38,
+    "description": "Dans cours, calculer le ratio heures/cours pour chaque programme",
+    "explanation": "$project permet de créer de nouveaux champs calculés.",
+    "solution": "db.cours.aggregate([{ $group: { _id: \"$programme\", totalHeures: { $sum: \"$heures\" }, totalCours: { $sum: 1 } } }, { $project: { programme: \"$_id\", totalHeures: 1, totalCours: 1, ratio: { $divide: [\"$totalHeures\", \"$totalCours\"] } } }])"
+  },
+  {
+    "levelId": 3,
+    "questionId": 39,
+    "description": "Dans cours, changer la salle en 'Salle A101' pour tous les cours de Martin",
+    "explanation": "updateMany modifie plusieurs documents en une requête.",
+    "solution": "db.cours.updateMany({ professeur: \"Martin\" }, { $set: { salle: \"Salle A101\" } })"
+  },
+  {
+    "levelId": 3,
+    "questionId": 40,
+    "description": "Dans grades, trouver les étudiants avec note >= 15 ET présence >= 80%",
+    "explanation": "Combinaison de deux filtres de comparaison.",
+    "solution": "db.grades.find({ note_finale: { $gte: 15 }, presence: { $gte: 80 } })"
+  },
+  {
+    "levelId": 3,
+    "questionId": 41,
+    "description": "Dans cours, lister titre et professeur triés alphabétiquement par professeur",
+    "explanation": "Projection puis tri alphabétique.",
+    "solution": "db.cours.find({}, { titre: 1, professeur: 1, _id: 0 }).sort({ professeur: 1 })"
+  },
+  {
+    "levelId": 3,
+    "questionId": 42,
+    "description": "Dans grades, calculer la présence moyenne par étudiant",
+    "explanation": "$group par studentId avec $avg sur presence.",
+    "solution": "db.grades.aggregate([{ $group: { _id: \"$studentId\", presenceMoyenne: { $avg: \"$presence\" } } }])"
+  },
+  {
+    "levelId": 3,
+    "questionId": 43,
+    "description": "Dans cours, compter combien de cours par professeur (trié par nombre décroissant)",
+    "explanation": "$group par professeur avec comptage, puis tri.",
+    "solution": "db.cours.aggregate([{ $group: { _id: \"$professeur\", nombreCours: { $sum: 1 } } }, { $sort: { nombreCours: -1 } }])"
+  },
+  {
+    "levelId": 3,
+    "questionId": 44,
+    "description": "Dans inscriptions, afficher le nom de l'étudiant et le titre du cours",
+    "explanation": "Double $lookup pour joindre inscriptions → etudiants et inscriptions → cours.",
+    "solution": "db.inscriptions.aggregate([{ $lookup: { from: \"etudiants\", localField: \"studentId\", foreignField: \"id\", as: \"etudiant\" } }, { $lookup: { from: \"cours\", localField: \"coursId\", foreignField: \"id\", as: \"cours\" } }, { $unwind: \"$etudiant\" }, { $unwind: \"$cours\" }, { $project: { \"etudiant.name\": 1, \"cours.titre\": 1, statut: 1 } }])"
+  },
+  {
+    "levelId": 3,
+    "questionId": 45,
+    "description": "Dans cours, calculer le total des heures par niveau_requis",
+    "explanation": "$group par niveau_requis avec $sum sur heures.",
+    "solution": "db.cours.aggregate([{ $group: { _id: \"$niveau_requis\", heuresTotales: { $sum: \"$heures\" } } }])"
+  }
+]

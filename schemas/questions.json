@@ -1,0 +1,8 @@
+{
+  "levelId": "Number",
+  "questionId": "Number",
+  "description": "String",
+  "solution": "String",
+  "explanation": "String",
+  "createdAt": "Date"
+}

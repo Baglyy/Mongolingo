@@ -1,0 +1,6 @@
+{
+  "studentId": "String",
+  "coursId": "String",
+  "note_finale": "Number",
+  "presence": "Number"
+}

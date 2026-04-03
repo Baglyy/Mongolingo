@@ -1,0 +1,13 @@
+{
+  "id": "String (unique)",
+  "name": "String",
+  "email": "String",
+  "date_naissance": "Date",
+  "genre": "String",
+  "adresse": "String",
+  "telephone": "String",
+  "date_inscription": "Date",
+  "statut": "String",
+  "niveau": "Number",
+  "programme": "String"
+}

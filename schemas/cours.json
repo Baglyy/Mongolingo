@@ -1,0 +1,13 @@
+{
+  "id": "String (unique)",
+  "titre": "String",
+  "description": "String",
+  "professeur": "String",
+  "heures": "Number",
+  "niveau_requis": "Number",
+  "capacite": "Number",
+  "programme": "String",
+  "date_debut": "Date",
+  "date_fin": "Date",
+  "salle": "String"
+}

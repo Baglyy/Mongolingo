@@ -1,0 +1,122 @@
+[
+  {
+    "studentId": "E1",
+    "coursId": "C5",
+    "date_inscription": "2026-01-20T00:00:00.000Z",
+    "statut": "complété"
+  },
+  {
+    "studentId": "E1",
+    "coursId": "C1",
+    "date_inscription": "2026-02-01T00:00:00.000Z",
+    "statut": "inscrit"
+  },
+  {
+    "studentId": "E2",
+    "coursId": "C2",
+    "date_inscription": "2025-09-15T00:00:00.000Z",
+    "statut": "complété"
+  },
+  {
+    "studentId": "E2",
+    "coursId": "C4",
+    "date_inscription": "2026-01-10T00:00:00.000Z",
+    "statut": "inscrit"
+  },
+  {
+    "studentId": "E3",
+    "coursId": "C1",
+    "date_inscription": "2026-02-05T00:00:00.000Z",
+    "statut": "annulé"
+  },
+  {
+    "studentId": "E3",
+    "coursId": "C3",
+    "date_inscription": "2026-02-10T00:00:00.000Z",
+    "statut": "inscrit"
+  },
+  {
+    "studentId": "E4",
+    "coursId": "C2",
+    "date_inscription": "2025-10-01T00:00:00.000Z",
+    "statut": "complété"
+  },
+  {
+    "studentId": "E4",
+    "coursId": "C4",
+    "date_inscription": "2026-01-12T00:00:00.000Z",
+    "statut": "inscrit"
+  },
+  {
+    "studentId": "E5",
+    "coursId": "C5",
+    "date_inscription": "2025-09-20T00:00:00.000Z",
+    "statut": "complété"
+  },
+  {
+    "studentId": "E5",
+    "coursId": "C1",
+    "date_inscription": "2026-01-25T00:00:00.000Z",
+    "statut": "complété"
+  },
+  {
+    "studentId": "E6",
+    "coursId": "C3",
+    "date_inscription": "2026-02-15T00:00:00.000Z",
+    "statut": "inscrit"
+  },
+  {
+    "studentId": "E6",
+    "coursId": "C2",
+    "date_inscription": "2026-02-20T00:00:00.000Z",
+    "statut": "annulé"
+  },
+  {
+    "studentId": "E7",
+    "coursId": "C3",
+    "date_inscription": "2026-01-18T00:00:00.000Z",
+    "statut": "complété"
+  },
+  {
+    "studentId": "E7",
+    "coursId": "C5",
+    "date_inscription": "2026-02-08T00:00:00.000Z",
+    "statut": "inscrit"
+  },
+  {
+    "studentId": "E8",
+    "coursId": "C2",
+    "date_inscription": "2025-09-10T00:00:00.000Z",
+    "statut": "complété"
+  },
+  {
+    "studentId": "E8",
+    "coursId": "C4",
+    "date_inscription": "2026-01-08T00:00:00.000Z",
+    "statut": "inscrit"
+  },
+  {
+    "studentId": "E9",
+    "coursId": "C3",
+    "date_inscription": "2026-02-12T00:00:00.000Z",
+    "statut": "inscrit"
+  },
+  {
+    "studentId": "E9",
+    "coursId": "C1",
+    "date_inscription": "2026-02-18T00:00:00.000Z",
+    "statut": "annulé"
+  },
+  {
+    "studentId": "E10",
+    "coursId": "C5",
+    "date_inscription": "2026-01-22T00:00:00.000Z",
+    "statut": "complété"
+  },
+  {
+    "studentId": "E10",
+    "coursId": "C2",
+    "date_inscription": "2026-01-28T00:00:00.000Z",
+    "statut": "inscrit"
+  }
+]

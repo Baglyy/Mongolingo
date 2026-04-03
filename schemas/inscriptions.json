@@ -1,0 +1,6 @@
+{
+  "studentId": "String",
+  "coursId": "String",
+  "date_inscription": "Date",
+  "statut": "String"
+}

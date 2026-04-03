@@ -1,0 +1,67 @@
+[
+  {
+    "id": "C1",
+    "titre": "Introduction à MongoDB",
+    "description": "Bases de données NoSQL avec MongoDB",
+    "professeur": "Martin",
+    "heures": 30,
+    "niveau_requis": 1,
+    "capacite": 25,
+    "programme": "Informatique",
+    "date_debut": "2026-01-15T09:00:00.000Z",
+    "date_fin": "2026-05-15T17:00:00.000Z",
+    "salle": "Salle B101"
+  },
+  {
+    "id": "C2",
+    "titre": "Droit des contrats",
+    "description": "Introduction au droit des contrats",
+    "professeur": "Durand",
+    "heures": 45,
+    "niveau_requis": 2,
+    "capacite": 35,
+    "programme": "Droit",
+    "date_debut": "2026-01-15T09:00:00.000Z",
+    "date_fin": "2026-05-15T17:00:00.000Z",
+    "salle": "Salle A201"
+  },
+  {
+    "id": "C3",
+    "titre": "Marketing digital",
+    "description": "Stratégies de marketing en ligne",
+    "professeur": "Léon",
+    "heures": 20,
+    "niveau_requis": 1,
+    "capacite": 40,
+    "programme": "Marketing",
+    "date_debut": "2026-01-20T09:00:00.000Z",
+    "date_fin": "2026-04-30T17:00:00.000Z",
+    "salle": "Salle C301"
+  },
+  {
+    "id": "C4",
+    "titre": "Droit pénal",
+    "description": "Introduction au droit pénal",
+    "professeur": "Durand",
+    "heures": 60,
+    "niveau_requis": 3,
+    "capacite": 50,
+    "programme": "Droit",
+    "date_debut": "2026-01-15T09:00:00.000Z",
+    "date_fin": "2026-06-15T17:00:00.000Z",
+    "salle": "Salle A101"
+  },
+  {
+    "id": "C5",
+    "titre": "Node.js Avancé",
+    "description": "Développement serveur avec Node.js",
+    "professeur": "Martin",
+    "heures": 40,
+    "niveau_requis": 2,
+    "capacite": 20,
+    "programme": "Informatique",
+    "date_debut": "2026-02-01T09:00:00.000Z",
+    "date_fin": "2026-05-30T17:00:00.000Z",
+    "salle": "Salle B201"
+  }
+]
