@@ -72,6 +72,13 @@ function Level() {
       const savedProgress = localStorage.getItem(
         `mongolingo_${levelId}_${questionId}`,
       );
+
+      // Charge toujours la question depuis l'API
+      const data = await getQuestionById(Number(levelId), Number(questionId));
+      if (data.success) {
+        setQuestion(data.question);
+      }
+
       if (savedProgress) {
         setAlreadyCompleted(true);
         const countData = await getQuestionCountByLevel(Number(levelId));
@@ -87,13 +94,6 @@ function Level() {
             }
           }
         }
-        return;
-      }
-
-      // Charge la question depuis l'API
-      const data = await getQuestionById(Number(levelId), Number(questionId));
-      if (data.success) {
-        setQuestion(data.question);
       }
     };
     fetchQuestion();
@@ -181,14 +181,28 @@ function Level() {
         <Alert
           severity="success"
           sx={{
+            position: "fixed",
+            top: 80,
+            right: 20,
             backgroundColor: "#46a302",
             color: "#ffffff",
-            marginBottom: 3,
             borderRadius: 2,
+            zIndex: 9999,
+            boxShadow: 4,
+            animation: "slideIn 0.3s ease-out",
+            "@keyframes slideIn": {
+              from: {
+                transform: "translateX(100%)",
+                opacity: 0,
+              },
+              to: {
+                transform: "translateX(0)",
+                opacity: 1,
+              },
+            },
           }}
         >
-          <Typography fontWeight={600}>Félicitations !</Typography>
-          <Typography>Niveau terminé. Redirection...</Typography>
+          <Typography fontWeight={600}>Niveau terminé</Typography>
         </Alert>
       )}
 
